@@ -379,10 +379,28 @@ bool Widget::eventFilter(QObject * obj, QEvent * event)
                 timerpu = new QTimer;
                 connect(timerpu, SIGNAL(timeout()),this, SLOT(punchAnimation()));
                 timerpu->start(100);
+                if(abs(mob1d.x-(widgetX+60))<30){
+                m1.isalive=0;
+                h.morexp(20);
+                ui->mob1->setText("0--------");
+                }
+
+                if(abs(mob2d.x-(widgetX+60))<30){
+                m2.isalive=0;
+                h.morexp(20);
+                ui->mob2->setText("0--------");
+                }
+
+                if(abs(mob3d.x-(widgetX+60))<30){
+                m3.isalive=0;
+                h.morexp(20);
+                ui->mob3->setText("0--------");
+                }
             }
         }
         if (isMoving == 0 && isMovingUp == 0 && isPunching == 0) {
             if (pressedKeys.contains(Qt::Key_R)) {
+
                 isPunching = 1;
                 ui->body->setText("K----) )\"");
                 ui->head->setText("   (•_•)");
@@ -391,6 +409,23 @@ bool Widget::eventFilter(QObject * obj, QEvent * event)
                 timerpu = new QTimer;
                 connect(timerpu, SIGNAL(timeout()),this, SLOT(punchAnimation()));
                 timerpu->start(100);
+                if(abs(mob1d.x-(widgetX+60))<30){
+                m1.isalive=0;
+                h.morexp(20);
+                ui->mob1->setText("0--------");
+                }
+
+                if(abs(mob2d.x-(widgetX+60))<30){
+                m2.isalive=0;
+                h.morexp(20);
+                ui->mob2->setText("0--------");
+                }
+
+                if(abs(mob3d.x-(widgetX+60))<30){
+                m3.isalive=0;
+                h.morexp(20);
+                ui->mob3->setText("0--------");
+                }
             }
         }
         if (isMoving == 0 && isMovingUp == 0 && isPunching == 0 && h.lvl>1) {
@@ -403,6 +438,17 @@ bool Widget::eventFilter(QObject * obj, QEvent * event)
                 timerpu = new QTimer;
                 connect(timerpu, SIGNAL(timeout()),this, SLOT(punchAnimation()));
                 timerpu->start(100);
+                   m1.isalive=0;
+                   h.morexp(0);
+                   ui->mob1->setText("0--------");
+                   m2.isalive=0;
+                   h.morexp(0);
+                   ui->mob2->setText("0--------");
+                   m3.isalive=0;
+                   h.morexp(0);
+                   ui->mob3->setText("0--------");
+                   h.morexp(10);
+
             }
         }
         if (isMoving == 0 && isMovingUp == 0 && isPunching == 0 && h.lvl>1) {
@@ -417,6 +463,16 @@ bool Widget::eventFilter(QObject * obj, QEvent * event)
                 timerpu = new QTimer;
                 connect(timerpu, SIGNAL(timeout()),this, SLOT(punchAnimation()));
                 timerpu->start(100);
+                m1.isalive=0;
+                h.morexp(0);
+                ui->mob1->setText("0--------");
+                m2.isalive=0;
+                h.morexp(0);
+                ui->mob2->setText("0--------");
+                m3.isalive=0;
+                h.morexp(0);
+                ui->mob3->setText("0--------");
+                h.morexp(10);
             }
         }
 
@@ -430,6 +486,23 @@ bool Widget::eventFilter(QObject * obj, QEvent * event)
                 timerpu2 = new QTimer;
                 connect(timerpu2, SIGNAL(timeout()),this, SLOT(punchAnimation2()));
                 timerpu2->start(100);
+                if(abs(mob1d.x-(widgetX2+60))<30){
+                m1.isalive=0;
+                h1.morexp(20);
+                ui->mob1->setText("0--------");
+                }
+
+                if(abs(mob2d.x-(widgetX2+60))<30){
+                m2.isalive=0;
+                h1.morexp(20);
+                ui->mob2->setText("0--------");
+                }
+
+                if(abs(mob3d.x-(widgetX2+60))<30){
+                m3.isalive=0;
+                h1.morexp(20);
+                ui->mob3->setText("0--------");
+                }
             }
         }
         if (isMoving2 == 0 && isMovingUp2 == 0 && isPunching2 == 0) {
@@ -442,6 +515,23 @@ bool Widget::eventFilter(QObject * obj, QEvent * event)
                 timerpu2 = new QTimer;
                 connect(timerpu2, SIGNAL(timeout()),this, SLOT(punchAnimation2()));
                 timerpu2->start(100);
+                if(abs(mob1d.x-(widgetX2+60))<30){
+                m1.isalive=0;
+                h1.morexp(20);
+                ui->mob1->setText("0--------");
+                }
+
+                if(abs(mob2d.x-(widgetX2+60))<30){
+                m2.isalive=0;
+                h1.morexp(20);
+                ui->mob2->setText("0--------");
+                }
+
+                if(abs(mob3d.x-(widgetX2+60))<30){
+                m3.isalive=0;
+                h1.morexp(20);
+                ui->mob3->setText("0--------");
+                }
             }
         }
         if (isMoving2 == 0 && isMovingUp2 == 0 && isPunching2 == 0 && h1.lvl>1) {
@@ -454,6 +544,16 @@ bool Widget::eventFilter(QObject * obj, QEvent * event)
                 timerpu2 = new QTimer;
                 connect(timerpu2, SIGNAL(timeout()),this, SLOT(punchAnimation2()));
                 timerpu2->start(100);
+                m1.isalive=0;
+                h1.morexp(0);
+                ui->mob1->setText("0--------");
+                m2.isalive=0;
+                h1.morexp(0);
+                ui->mob2->setText("0--------");
+                m3.isalive=0;
+                h1.morexp(0);
+                ui->mob3->setText("0--------");
+                h1.morexp(10);
             }
         }
         if (isMoving2 == 0 && isMovingUp2 == 0 && isPunching2 == 0 && h1.lvl>1) {
@@ -468,6 +568,16 @@ bool Widget::eventFilter(QObject * obj, QEvent * event)
                 timerpu2 = new QTimer;
                 connect(timerpu2, SIGNAL(timeout()),this, SLOT(punchAnimation2()));
                 timerpu2->start(100);
+                m1.isalive=0;
+                h1.morexp(0);
+                ui->mob1->setText("0--------");
+                m2.isalive=0;
+                h1.morexp(0);
+                ui->mob2->setText("0--------");
+                m3.isalive=0;
+                h1.morexp(0);
+                ui->mob3->setText("0--------");
+                h1.morexp(10);
             }
         }
 
@@ -736,7 +846,7 @@ ui->bullet3->move(mob3d.x-l3,910);
 
 
 
- if(((widgetX+60>=sch.x && widgetX-6<=sch.x) || (widgetX+60>=sch2.x && widgetX-6<=sch2.x )|| (widgetX+60>=sch3.x && widgetX-6<=sch3.x))&&(widgetY==860)){
+ if(((widgetX+50>=sch.x && widgetX-6<=sch.x) || (widgetX+50>=sch2.x && widgetX-6<=sch2.x )|| (widgetX+50>=sch3.x && widgetX-6<=sch3.x))&&(widgetY==860)){
   h.isalive=0;
   ui->head->setText("(X_X)");
   ui->body->setText("/)_)_");
@@ -747,7 +857,7 @@ ui->bullet3->move(mob3d.x-l3,910);
 }
 
 
- if(((widgetX2+60>=sch.x && widgetX2-6<=sch.x) || (widgetX2+60>=sch2.x && widgetX2-6<=sch2.x) ||(widgetX2+60>=sch3.x && widgetX2-6<=sch3.x))&&(widgetY2==860)){
+ if(((widgetX2+50>=sch.x && widgetX2-6<=sch.x) || (widgetX2+50>=sch2.x && widgetX2-6<=sch2.x) ||(widgetX2+50>=sch3.x && widgetX2-6<=sch3.x))&&(widgetY2==860)){
   h1.isalive=0;
   ui->head2->setText("(X_X)");
   ui->body2->setText("/)_)_");
@@ -759,7 +869,7 @@ ui->bullet3->move(mob3d.x-l3,910);
 
 
 
- if (widgetX2+60==mob1d.x && m1.isalive && widgetY2==860){
+ if (widgetX2+50==mob1d.x && m1.isalive && widgetY2==860){
      h1.isalive=0;
      ui->body2->setText("(X_X)");
      ui->legs2->setText("/)_)_");
@@ -768,7 +878,7 @@ ui->bullet3->move(mob3d.x-l3,910);
      ui->dia->show();
      }
  }
- if (widgetX+60==mob1d.x && m1.isalive && widgetY==860){
+ if (widgetX+50==mob1d.x && m1.isalive && widgetY==860){
      h1.isalive=0;
      ui->body->setText("(X_X)");
      ui->legs->setText("/)_)_");
@@ -778,7 +888,7 @@ ui->bullet3->move(mob3d.x-l3,910);
      }
  }
 
- if (widgetX2+60==mob2d.x && m1.isalive && widgetY2==860){
+ if (widgetX2+50==mob2d.x && m1.isalive && widgetY2==860){
      h1.isalive=0;
      ui->body2->setText("(X_X)");
      ui->legs2->setText("/)_)_");
@@ -787,7 +897,7 @@ ui->bullet3->move(mob3d.x-l3,910);
      ui->dia->show();
      }
  }
- if (widgetX+60==mob3d.x && m1.isalive && widgetY==860){
+ if (widgetX+50==mob3d.x && m1.isalive && widgetY==860){
      h1.isalive=0;
      ui->body->setText("(X_X)");
      ui->legs->setText("/)_)_");
@@ -799,7 +909,7 @@ ui->bullet3->move(mob3d.x-l3,910);
 
 
 
- if (widgetX+60>mob1d.x && widgetX+60<mob1d.x+100 && m1.isalive && widgetY==860){
+ if (widgetX+50>mob1d.x && widgetX+60<mob1d.x+100 && m1.isalive && widgetY==860){
      m1.isalive=0;
      ui->mob1->setText("0--------");
      h.morexp(50);
@@ -807,7 +917,7 @@ ui->bullet3->move(mob3d.x-l3,910);
      ui->ur2->display(h1.lvl);
  }
 
- if (widgetX2+60>mob1d.x && widgetX2+60<mob1d.x+100 && m1.isalive && widgetY2==860){
+ if (widgetX2+50>mob1d.x && widgetX2+60<mob1d.x+100 && m1.isalive && widgetY2==860){
      m1.isalive=0;
      ui->mob1->setText("0--------");
      h1.morexp(50);
@@ -816,7 +926,7 @@ ui->bullet3->move(mob3d.x-l3,910);
  }
 
 
- if (widgetX+60>mob2d.x && widgetX+60<mob2d.x+100 && m2.isalive && widgetY==860){
+ if (widgetX+50>mob2d.x && widgetX+60<mob2d.x+100 && m2.isalive && widgetY==860){
      m2.isalive=0;
      ui->mob2->setText("0--------");
      h.morexp(50);
@@ -824,7 +934,7 @@ ui->bullet3->move(mob3d.x-l3,910);
      ui->ur2->display(h1.lvl);
  }
 
- if (widgetX2+60>mob2d.x && widgetX2+60<mob2d.x+100 && m2.isalive && widgetY2==860){
+ if (widgetX2+50>mob2d.x && widgetX2+60<mob2d.x+100 && m2.isalive && widgetY2==860){
      m2.isalive=0;
      ui->mob2->setText("0--------");
      h1.morexp(50);
@@ -833,7 +943,7 @@ ui->bullet3->move(mob3d.x-l3,910);
  }
 
 
- if (widgetX+60>mob3d.x && widgetX+60<mob3d.x+100 && m3.isalive && widgetY==860){
+ if (widgetX+50>mob3d.x && widgetX+60<mob3d.x+100 && m3.isalive && widgetY==860){
      m3.isalive=0;
      ui->mob3->setText("0--------");
      h.morexp(50);
@@ -841,7 +951,7 @@ ui->bullet3->move(mob3d.x-l3,910);
      ui->ur2->display(h1.lvl);
  }
 
- if (widgetX2+60>mob3d.x && widgetX2+60<mob3d.x+100 && m3.isalive && widgetY2==860){
+ if (widgetX2+50>mob3d.x && widgetX2+60<mob3d.x+100 && m3.isalive && widgetY2==860){
      m3.isalive=0;
      ui->mob3->setText("0--------");
      h1.morexp(50);
